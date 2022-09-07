@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="secondary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="primary">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+  <p class="titulo">Seleccione la seccion que desea registrar asistencia</p>
+  <p class="subtitulo">Al hacer click en una seccion, esta abrira el codigo qr de la clase correspondiente</p>
+  <ion-item button (click)="buttonClick()" routerLink="/codigo-qr">
+    <ion-label >
+      Seccion 001D
+    </ion-label>
+  </ion-item>
+  <ion-item button (click)="buttonClick()"routerLink="/codigo-qr">
+    <ion-label>
+      Seccion 002D
+    </ion-label>
+  </ion-item>
+  <ion-item button (click)="buttonClick()"routerLink="/codigo-qr">
+    <ion-label>
+      Seccion 003D
+    </ion-label>
+  </ion-item>
+  <ion-item button (click)="buttonClick()"routerLink="/codigo-qr">
+    <ion-label>
+      Seccion 004D
+    </ion-label>
+  </ion-item>
+  <ion-item button (click)="buttonClick()"routerLink="/codigo-qr">
+    <ion-label>
+      Seccion 005D
+    </ion-label>
+  </ion-item>
+
+</ion-content>

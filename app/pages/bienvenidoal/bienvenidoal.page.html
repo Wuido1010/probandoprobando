@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" >Inicio sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+    <ion-list-header>
+      <ion-label>Bienvenido Alumno, inicie sesion. Si no tiene cuenta, dirijase a "Crear cuenta"</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="email" value="" [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9-.]+)@([a-zA-Z0-9-.]+).([a-zA-Z]{2,5})$"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-input type="password" placeholder="Contraseña"
+                 name="password" value="" [(ngModel)]= "usuario.password"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-button [disabled] ="formulario.invalid"
+            type="submit" expand="block" routerLink="/inicio-es">
+      Iniciar Sesión
+    </ion-button>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Recordar Usuario</ion-label>
+    </ion-item>
+  </form>
+  <ion-button expand="block" fill="outline" routerLink="/crearcu">Crear Cuenta</ion-button>
+</ion-content>
